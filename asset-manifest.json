@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/love-travel/static/css/main.5b14fbf3.chunk.css",
-    "main.js": "/love-travel/static/js/main.29bbedfa.chunk.js",
-    "main.js.map": "/love-travel/static/js/main.29bbedfa.chunk.js.map",
+    "main.css": "/love-travel/static/css/main.3c116a1f.chunk.css",
+    "main.js": "/love-travel/static/js/main.dde614cd.chunk.js",
+    "main.js.map": "/love-travel/static/js/main.dde614cd.chunk.js.map",
     "runtime-main.js": "/love-travel/static/js/runtime-main.cf38a2bb.js",
     "runtime-main.js.map": "/love-travel/static/js/runtime-main.cf38a2bb.js.map",
     "static/css/2.db0da461.chunk.css": "/love-travel/static/css/2.db0da461.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.bbb62225.chunk.js.map": "/love-travel/static/js/3.bbb62225.chunk.js.map",
     "index.html": "/love-travel/index.html",
     "static/css/2.db0da461.chunk.css.map": "/love-travel/static/css/2.db0da461.chunk.css.map",
-    "static/css/main.5b14fbf3.chunk.css.map": "/love-travel/static/css/main.5b14fbf3.chunk.css.map",
+    "static/css/main.3c116a1f.chunk.css.map": "/love-travel/static/css/main.3c116a1f.chunk.css.map",
     "static/js/2.4e5f0c0c.chunk.js.LICENSE.txt": "/love-travel/static/js/2.4e5f0c0c.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/love-travel/static/media/outline-icons.ddae9b1b.woff",
     "static/media/logo.47775952.png": "/love-travel/static/media/logo.47775952.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.cf38a2bb.js",
     "static/css/2.db0da461.chunk.css",
     "static/js/2.4e5f0c0c.chunk.js",
-    "static/css/main.5b14fbf3.chunk.css",
-    "static/js/main.29bbedfa.chunk.js"
+    "static/css/main.3c116a1f.chunk.css",
+    "static/js/main.dde614cd.chunk.js"
   ]
 }
