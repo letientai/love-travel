@@ -8,7 +8,7 @@ function Router() {
     return(
         <BrowserRouter>
             <Switch>
-                <Route path="/love_travel" component={Home} exact/>
+                <Route path="/love-travel" component={Home} exact/>
                 <Route path="/shop" component={Shop} />
             </Switch>
         </BrowserRouter>

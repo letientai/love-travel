@@ -1,28 +1,33 @@
+import logo1 from '../image/iconTop/logo1.png'
+import logo2 from '../image/iconTop/logo2.png'
+import logo3 from '../image/iconTop/logo3.png'
+import logo4 from '../image/iconTop/logo4.png'
+
 const ImgsTopData= [
     {
       key: '1',
       text: 'RELAX',
-      logo: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/t-relax.png',
-      image: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-6-filter.jpg?id=1585',
+      logo: logo1,
+      image: 'https://img4.thuthuatphanmem.vn/uploads/2019/12/16/hinh-nen-4k-do-phan-giai-cao_024351042.jpg',
 
     },
     {
       key: '2',
       text: 'CULTURAL',
-      logo: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/t-cultural.png',
-      image: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-5-filter.jpg?id=1584',
+      logo: logo2,
+      image: 'https://img4.thuthuatphanmem.vn/uploads/2019/12/16/hinh-nen-4k-do-phan-giai-cao-chu-de-thien-nhien_024350542.jpg',
     },
     {
       key: '3',
       text: 'SPORT',
-      logo: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/t-sport.png',
-      image: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-4-1.jpg',
+      logo: logo3,
+      image: 'https://img4.thuthuatphanmem.vn/uploads/2019/12/16/anh-nen-thien-nhien-4k_024350402.jpg',
     },
     {
       key: '4',
       text: 'HISTORY',
-      logo: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/t-history.png',
-      image: 'http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-2.jpg',
+      logo: logo4,
+      image: 'https://img4.thuthuatphanmem.vn/uploads/2019/12/16/hinh-nen-phong-canh-thien-nhien-4k_024353683.jpg',
 
     },
   

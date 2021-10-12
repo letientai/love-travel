@@ -9,7 +9,7 @@ import { Carousel } from "react-carousel-minimal";
 
 function Home() {
   const [image, setImage] = useState(
-    "http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-6-filter.jpg?id=1585"
+    "https://img4.thuthuatphanmem.vn/uploads/2019/12/16/anh-nen-thien-nhien-4k_024350402.jpg"
   );
   const [minutes, setMinutes] = useState(`0${0}`);
   const [seconds, setSeconds] = useState(0);
@@ -166,7 +166,7 @@ function Home() {
         <Navbar />
         <div className="content">
           <Header as="h1" className="title">
-            Search your next <span>Holiday</span>
+            Search your next <span>Holidayy</span>
           </Header>
           <Header as="h2" className="title">
             CHECK OUR BEST PROMOTIONS

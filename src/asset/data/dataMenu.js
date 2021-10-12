@@ -5,7 +5,7 @@ const dataMenu = [
     add: 'Europe',
     price: '700',
     image:
-      "http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/package-2-150x150.jpg",
+      "http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/03/package-5-150x150.jpg",
   },
   {
     key: "2",
