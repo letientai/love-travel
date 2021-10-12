@@ -34,7 +34,7 @@ const Navbar = () => {
     }
   };
   const moveTohome = () => {
-    history.push("/love_travel");
+    history.push("/love-travel");
   };
   return (
     <div className="navbar">
@@ -42,7 +42,7 @@ const Navbar = () => {
         <img src={logo} alt="" />
       </div>
       <div className="options">
-        <Link to="/love_travel" className="option">
+        <Link to="/love-travel" className="option">
           <span>HOME</span>
         </Link>
         <Link to="/" className="option">

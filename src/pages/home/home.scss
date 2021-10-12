@@ -235,14 +235,22 @@ html {
         .title {
           width: 300px;
           p {
-            color: rgb(141, 140, 140);
+            color: rgb(250, 241, 241);
             font-family: sans-serif;
           }
           h1 {
             margin-top: 0;
             font-size: 35px;
             font-family: sans-serif;
-            color: rgb(105, 99, 99);
+            color: rgb(238, 234, 234);
+            // text-shadow: 1px 1px 0 0 black;
+            text-shadow: 0.3px 0.3px 1.4px rgba(75, 73, 73, 0.119),
+            0.6px 0.8px 3.3px rgba(41, 40, 40, 0.172),
+            1.2px 1.5px 6px rgba(26, 23, 23, 0.212),
+            1.9px 2.4px 10px rgba(19, 18, 18, 0.248),
+            3.2px 4px 16.4px rgba(22, 22, 22, 0.288),
+            5.5px 6.9px 28.7px rgba(34, 32, 32, 0.341),
+            12px 15px 62px rgba(22, 21, 21, 0.46);
           }
         }
         .search-mail {
@@ -271,6 +279,7 @@ html {
         background-color: #ffffff;
         display: flex;
         justify-content: space-around;
+        
         .column1 {
           width: 40%;
           margin: 40px;
@@ -347,7 +356,7 @@ html {
       opacity: 1;
     }
   }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1150px) {
     .search {
       padding-left: 0 !important;
       width: 220px !important;
@@ -367,6 +376,20 @@ html {
         .icon {
           width: 100% !important;
           color: rgb(163, 163, 163);
+        }
+      }
+    }
+    .footer{
+      .infomation{
+        .wvp_row1{
+          display: block;
+          .column1{
+            width: 80%;
+            text-align: center;
+          }
+          .column2{
+            width: 80%;
+          }
         }
       }
     }
