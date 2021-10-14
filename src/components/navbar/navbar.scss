@@ -106,6 +106,7 @@
         }
         .card {
           margin: 20px;
+          // background-color: blue;
           .image {
             padding: 10px;
             display: flex;
@@ -147,12 +148,37 @@
             }
           }
         }
+        .menu-hide{
+          // display: none;
+          height: 500px;
+          .option{
+            width: 100% !important;
+            color: wheat;
+            padding: 20px;
+            border: 1px solid rgb(171, 171, 172);
+            // margin: 5px;
+            &:hover{
+              background-color: rgb(217, 241, 241);
+              color: rgb(170, 169, 169);
+            }
+            .option1{
+              span{
+                color: rgb(121, 118, 118);
+                padding: 10px;
+                font-size: 17px;
+              }
+            }
+          }
+        }
       }
     }
   }
   @media screen and (max-width: 1100px) {
     .logoMenu {
-      margin-left: 10px !important;
+      margin-left: 0px !important;
+      .open{
+        font-size: 20px;
+      }
      
     }
     .options {

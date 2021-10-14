@@ -1,22 +1,29 @@
 import './card.scss'
 import React from 'react'
 import { Header, Button } from 'semantic-ui-react'
+import { useHistory } from "react-router-dom";
 
 const Card = (props) =>{
-    
+    const history = useHistory();
+    const item = props.product;
+    const moveToDetail = () =>{
+      history.push(`/product/${item.id}`)
+      console.log("item", item.id);
+    }
     return(
         <div>
-            <div className="card-container" key={props.product.id} style={{backgroundImage:`url(${props.product.image})`}}>
+            <div className="card-container" key={item.id} style={{backgroundImage:`url(${item.image})`}} onClick={moveToDetail}>
                 <div className="inf">
                     <h2>PACKAGE</h2>
-                    <Header as='h3' className='text'>{props.product.text}</Header>
-                    <Button animated='fade' className='btn'>
-                        <Button.Content visible >VIEW DESTINATION</Button.Content>
-                        <Button.Content hidden>BOOK ROOM</Button.Content>
-                    </Button>
+                    <Header as='h3' className='text'>{item.text}</Header>
+                    <div className="btn">
+                        <Button color="green" className="btn-bookRom">
+                            See more
+                        </Button>
+                    </div>
                 </div>
                 <div className="add">
-                    <h2>{props.product.add}</h2>
+                    <h2>{item.add}</h2>
                     <p>PACKAGE</p>
                 </div>
 

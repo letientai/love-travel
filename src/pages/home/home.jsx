@@ -1,11 +1,13 @@
 import Navbar from "../../components/navbar/navbar";
 import "./home.scss";
-import { Header, Dropdown, Icon, Button, Input } from "semantic-ui-react";
+import { Header, Dropdown, Icon, Button } from "semantic-ui-react";
 import React, { useState, useEffect } from "react";
 import InfoData from "../../asset/data/infoData";
 import Card from "../../components/card/card";
 import ImgsTopData from "../../asset/data/imgsTopData";
 import { Carousel } from "react-carousel-minimal";
+import Footer from "../../components/footer/footer";
+import {useHistory} from 'react-router-dom'
 
 function Home() {
   const [image, setImage] = useState(
@@ -14,6 +16,7 @@ function Home() {
   const [minutes, setMinutes] = useState(`0${0}`);
   const [seconds, setSeconds] = useState(0);
   const [hours, setHours] = useState(12);
+  const history = useHistory();
 
   useEffect(() => {
     fetchData();
@@ -52,6 +55,9 @@ function Home() {
       }
     }
   };
+  const moveToShop = () =>{
+    history.push('/shop');
+  }
   const onChangBackground = (field) => {
     setImage(field);
     let animation = document.getElementById("top");
@@ -166,7 +172,7 @@ function Home() {
         <Navbar />
         <div className="content">
           <Header as="h1" className="title">
-            Search your next <span>Holidayy</span>
+            Search your next <span>Holiday</span>
           </Header>
           <Header as="h2" className="title">
             CHECK OUR BEST PROMOTIONS
@@ -237,7 +243,7 @@ function Home() {
             rhoncus urna dictum neque molestie ultricies mauris ac.
           </p>
           <div className="btn">
-            <Button color="green" className="btn-bookRom">
+            <Button color="green" className="btn-bookRom" onClick={moveToShop}>
               BOOK NOW
             </Button>
           </div>
@@ -290,76 +296,8 @@ function Home() {
           />
         </div>
       </div>
-      <div className="footer">
-        <div className="content">
-          <div className="send-mail">
-            <div className="title">
-              <p>KEEP IN TOUCH</p>
-              <h1>Travel with Us</h1>
-            </div>
-            <div className="search-mail">
-              <Input iconPosition="left" placeholder="Email" className='search'>
-                <Icon name="at" />
-                <input />
-              </Input>
-              <Button  color="blue" className='btn-send'>
-                Send
-              </Button>
-            </div>
-          </div>
-          <div className="infomation">
-              <div className="wvp_row1">
-                <div className="column1">
-                  <img src="http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/logo-color.png" alt="" />
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam et nibh condimentum venenatis eu ac magnasin. Quisque interdum est mauris, eget ullamcorper.</p>
-                  <div className="icon">
-                    <Icon name='twitter' className="icon1"/>
-                    <Icon name='youtube' className="icon1"/>
-                    <Icon name='facebook' className="icon1"/>
-                    <Icon name='instagram' className="icon1"/>
-                  </div>
-                </div>
-                <div className="column2">
-                  <div className="option">
-                    <p>OUR AGENCY</p>
-                    <ul>
-                      <li> <Icon name='angle right'/>Services</li>
-                      <li> <Icon name='angle right'/>Insurancee</li>
-                      <li> <Icon name='angle right'/>Agency</li>
-                      <li><Icon name='angle right'/>Tourism</li>
-                      <li> <Icon name='angle right'/>Payment</li>
-                    </ul>
-                  </div>
-                  <div className="option">
-                    <p>PARTNERS</p>
-                    <ul>
-                      <li><Icon name='angle right'/>Booking</li>
-                      <li><Icon name='angle right'/>RentalCar</li>
-                      <li><Icon name='angle right'/>HostelWorld</li>
-                      <li><Icon name='angle right'/>Trivago</li>
-                      <li><Icon name='angle right'/>TripAdvisor</li>
-                    </ul>
-                  </div>
-                  <div className="option">
-                    <p>LAST MINUTE</p>
-                    <ul>
-                      <li><Icon name='angle right'/>London</li>
-                      <li> <Icon name='angle right'/>California</li>
-                      <li> <Icon name='angle right'/>Indonesia</li>
-                      <li> <Icon name='angle right'/>Europe</li>
-                      <li> <Icon name='angle right'/>Oceania</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="wvp_row2">
-                <p>THE BEST WORDPRESS TRAVEL THEME</p>
-                <p>COPYRIGHT NICDARK THEMES 2018</p>
-                
-              </div>
-          </div>
-        </div>
-      </div>
+      
+      <Footer/>
     </div>
   );
 }
