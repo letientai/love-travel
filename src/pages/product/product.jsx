@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/navbar";
 import MainData from "../../asset/data/mainData";
 import Footer from "../../components/footer/footer";
 import { useLocation } from "react-router-dom";
-import { Icon, Input, Button } from "semantic-ui-react";
+import { Icon, Input, Button, Modal, Image } from "semantic-ui-react";
 import Map from "../../components/map/map";
 
 function Product() {
@@ -21,16 +21,17 @@ function Product() {
   const id = location.pathname?.split("product/")[1];
   const key = "AIzaSyC_OIsbQc7McILuw7HzAqnJY5DbTv0SLQg";
   // const key = "'AIzaSyDPm_QnYeqX-zFJ-4AusURyOwuLxhzMtjA";
+  const [open, setOpen] = React.useState(false);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchData();
-  },[location]);
+  }, [location]);
 
   const fetchData = () => {
     setData(MainData[parseInt(id) - 1]);
     setImage(MainData[parseInt(id) - 1].image);
-
   };
   const onChangeImage = (field) => {
     setImage(field);
@@ -44,7 +45,7 @@ function Product() {
       setQuantity(quantity - 1);
     }
   };
-  const onChange = (e ,field) => {
+  const onChange = (e, field) => {
     const value = e.target.value;
     switch (field) {
       case "name":
@@ -69,6 +70,10 @@ function Product() {
       // code block
     }
   };
+  let checkInfo = true;
+  !name || !surname || !phone || !guest || !email
+    ? (checkInfo = true)
+    : (checkInfo = false);
   return (
     <div className="container">
       <div className="top2">
@@ -158,35 +163,37 @@ function Product() {
                 placeholder="Name"
                 className="input"
                 value={name}
-                onChange={(e) => onChange(e, 'name')}
+                onChange={(e) => onChange(e, "name")}
               />
               <Input
                 placeholder="Surname"
                 className="input"
                 value={surname}
-                onChange={(e) => onChange(e, 'surname')}
+                onChange={(e) => onChange(e, "surname")}
               />
             </div>
             <div className="content-form">
               <Input
                 placeholder="Email"
                 className="input"
+                type="email"
                 value={email}
-                onChange={(e) => onChange(e, 'email')}
+                onChange={(e) => onChange(e, "email")}
               />
               <Input
                 placeholder="Guest"
                 className="input"
                 value={guest}
-                onChange={(e) => onChange(e, 'guest')}
+                onChange={(e) => onChange(e, "guest")}
               />
             </div>
             <div className="content-form">
               <Input
                 placeholder="Phone"
                 className="input ip1"
+                type="number"
                 value={phone}
-                onChange={(e) => onChange(e, 'phone')}
+                onChange={(e) => onChange(e, "phone")}
               />
             </div>
             <div className="content-form">
@@ -194,11 +201,45 @@ function Product() {
                 placeholder="Message"
                 className="input ip1"
                 value={message}
-                onChange={(e) => onChange(e, 'message')}
+                onChange={(e) => onChange(e, "message")}
               />
             </div>
             <div className="content-form">
-              <Button className="btn">Send</Button>
+              {/* <Button className="btn" disabled={checkInfo}>
+                Send
+              </Button> */}
+              <Modal
+                onClose={() => setOpen(false)}
+                onOpen={() => setOpen(true)}
+                open={open}
+                trigger={ <Button className="btn" disabled={checkInfo}>
+                Send
+              </Button>}
+              >
+                <Modal.Header>Is your information correct?</Modal.Header>
+                <Modal.Content image>
+                  <Image
+                    size="medium"
+                    src={data.image}
+                    wrapped
+                  />
+                  <Modal.Description>
+                    <p>Name: {name}</p>
+                    <p>Surname: {surname}</p>
+                    <p>Email: {email}</p>
+                    <p>Guest: {guest}</p>
+                    <p>Phone: {phone}</p>
+                    <p>Message: {message}</p>
+                  </Modal.Description>
+                </Modal.Content>
+                <Modal.Actions>
+                  <Button onClick={() => setOpen(false)}>Cancel</Button>
+                  <Button onClick={() => setOpen(false)} positive>
+                    Ok
+                  </Button>
+                  
+                </Modal.Actions>
+              </Modal>
             </div>
           </div>
         </div>
