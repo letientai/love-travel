@@ -6,15 +6,49 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  background-position-y: bottom;
-  background-image: url("https://chiase24.com/wp-content/uploads/2020/02/T%E1%BB%95ng-h%E1%BB%A3p-h%C3%ACnh-%E1%BA%A3nh-v%E1%BB%81-Nh%E1%BA%ADt-B%E1%BA%A3n-%C4%91%E1%BA%B9p-nh%E1%BA%A5t-13.jpg");
+  background-position-y: center;
+  background-image: url("https://icapi.org/wp-content/uploads/2019/11/canh-dep-han-quoc-15.jpg");
 }
 .content{
   margin-top: 40px;
+  // background-color: black;
+  .menuShop{
+    margin: auto;
+    max-width: 1350px;
+    .searchShop{
+      margin: auto;
+      width: 80%;
+      // background-color: rebeccapurple;
+      .selectForm{
+        text-align: center;
+        display: flex;
+        width: 300px;
+        // background-color: red;
+        margin: 20px;
+        p{
+          font-size: 22px;
+          // color: rgb(80, 80, 80);
+          color: rgb(16, 148, 148);
+          margin: auto;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .selectBox{
+          // color: rgb(80, 80, 80);
+          color: rgb(16, 148, 148);
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          width: 140px;
+          padding: 10px;
+          margin: 20px 10px;
+          border: 1px solid rgb(161, 241, 204);
+        }
+      }
+    }
+  }
   .content-products {
     margin: auto;
     max-width: 1350px;
     .card {
+      // background-color: red;
       margin: auto;
       width: 80%;
       display: flex;

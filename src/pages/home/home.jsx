@@ -216,7 +216,7 @@ function Home() {
         <div className="content-products">
           <div className="card">
             {InfoData.map((item) => (
-              <Card product={item} />
+              <Card product={item} key={item.id} />
             ))}
           </div>
         </div>

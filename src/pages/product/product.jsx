@@ -26,10 +26,10 @@ function Product() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    fetchData();
+    fetchDatas();
   }, [location]);
 
-  const fetchData = () => {
+  const fetchDatas = () => {
     setData(MainData[parseInt(id) - 1]);
     setImage(MainData[parseInt(id) - 1].image);
   };
