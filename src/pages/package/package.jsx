@@ -12,7 +12,6 @@ function Package() {
       </div>
       <div className="content-package">
       <h1>Chưa có gì hết Ahihi đồ ngu !!</h1>
-
       </div>
       <Footer />
     </div>
