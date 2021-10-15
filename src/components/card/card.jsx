@@ -12,7 +12,7 @@ const Card = (props) =>{
     }
     return(
         <div>
-            <div className="card-container" key={item.id} style={{backgroundImage:`url(${item.image})`}} onClick={moveToDetail}>
+            <div className="card-container" key={props.product.id} style={{backgroundImage:`url(${item.image})`}} onClick={moveToDetail}>
                 <div className="inf">
                     <h2>PACKAGE</h2>
                     <Header as='h3' className='text'>{item.text}</Header>

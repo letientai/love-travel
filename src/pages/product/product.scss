@@ -1,176 +1,178 @@
 .top2 {
-    position: relative;
-    width: 100% !important;
-    display: block;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    background-image: url("https://img4.thuthuatphanmem.vn/uploads/2020/12/26/hinh-nen-nhat-ban_125915822.jpg");
-  }
-  .content{
-    margin: 50px 0;
-    .content-product {
-      margin: auto;
-      max-width: 1350px;
-      width: 75%;
-      display: flex;
-      justify-content: space-between;
-      .content-img{
-          width: 45%;
-          img{
-              width: 100%;
-              height: 400px;
-          }
-          .item{
-            display: flex;
-            justify-content: space-around;
-            img{
-              width: 100px;
-              height: 90px;
-            }
-          }
-      }
-      .infomation{
-        width: 50%;
-        // background-color: rebeccapurple;
-        color: rgb(143, 141, 145);
-        h2{
-          color: rgb(255, 174, 0);
-        }
-        b{
-          font-size: 30px;
-          margin: 10px 0;
-          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        .icon{
-          margin: 10px 0;
-        }
-        p{
-          font-size: 17px;
-        }
-        .quantity{
-          width: 130px;
-          // background-color: yellow;
-          .inp-quantity{
-            width: 40px;
-          }
-        }
-        .btn-add{
-          background-color: rgb(78, 201, 150);
-          color: white;
-          border-radius: none !important;
-          width: 120px;
-          padding: 10px 5px;
-        }
-      }
-    }
-  }
-  .form{
-    width: 80%;
-    max-width: 1200px;
+  position: relative;
+  width: 100% !important;
+  display: block;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-image: url("https://img4.thuthuatphanmem.vn/uploads/2020/12/26/hinh-nen-nhat-ban_125915822.jpg");
+}
+.content {
+  margin: 50px 0;
+  .content-product {
     margin: auto;
-    margin-top: 30px;
+    max-width: 1350px;
+    width: 75%;
     display: flex;
-    justify-content: space-around;
-    .map{
-      width: 60%;
-    }
-    .form-register{
-      width: 300px;
-      height: 420px;
-      border: 1px solid rgb(218, 213, 213);
-      .header{
+    justify-content: space-between;
+    .content-img {
+      width: 45%;
+      img {
         width: 100%;
-        text-align: center;
-        background-color: rgb(78, 201, 150);
-        color: rgb(255, 255, 255);
-        padding: 40px 0;
-        font-size: 30px;
-      }
-      .content-form{
-        width: 90%;
-        margin: auto;
-        justify-content: space-around;
-        display: flex;
-        .input{
-          margin-top: 20px;
-          width: 120px;
-          border-radius: 30px !important;
-        }
-        .ip1{
-          width: 255px;
-        }
-        .btn{
-          margin: 10px 0;
-          background-color: rgb(78, 201, 150);
-          width: 120px;
-          color: rgb(255, 255, 255);
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 1230px) {
-    
-    .content{
-      .content-product{
-        display: block;
-        .content-img{
-          width: 500px;
-          margin: auto;
-        }
-        .infomation{
-          width: 500px;
-          margin: auto;
-          margin-top: 30px;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 650px) {
-    .content{
-      .content-product{
-        width: 100%;
-        display: block;
-        .content-img{
-          width: 300px;
-          margin: auto;
-          img{
-            height: 300px;
-          }
-          .item{
-            img{
-              width: 60px;
-              height: 60px;
-            }
-          }
-        }
-        .infomation{
-          width: 200px;
-          margin: auto;
-          margin-top: 30px;
-        }
-      }
-      .form{
-        .map{
-          height: 280px;
-          width: 100%;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 1000px) {
-    
-    .form{
-      display: block;
-      .map{
         height: 400px;
-        margin: auto;
       }
-      .form-register{
-        margin: auto;
-        margin-top: 20px;
+      .item {
+        display: flex;
+        justify-content: space-around;
+        img {
+          width: 100px;
+          height: 90px;
+        }
+      }
+    }
+    .infomation {
+      width: 50%;
+      // background-color: rebeccapurple;
+      color: rgb(143, 141, 145);
+
+      h2 {
+        color: rgb(255, 174, 0);
+      }
+      b {
+        font-size: 30px;
+        margin: 10px 0;
+        color: rgb(16, 148, 148);
+
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .icon {
+        margin: 10px 0;
+        color: rgb(16, 148, 148);
+      }
+      p {
+        font-size: 17px;
+      }
+      .quantity {
+        width: 130px;
+        // background-color: yellow;
+        .inp-quantity {
+          width: 40px;
+        }
+      }
+      .btn-add {
+        background-color: rgb(78, 201, 150);
+        color: white;
+        border-radius: none !important;
+        width: 120px;
+        padding: 10px 5px;
       }
     }
   }
+}
+.form {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  .map {
+    width: 60%;
+  }
+  .form-register {
+    width: 300px;
+    height: 420px;
+    border: 1px solid rgb(218, 213, 213);
+    .header {
+      width: 100%;
+      text-align: center;
+      background-color: rgb(78, 201, 150);
+      color: rgb(255, 255, 255);
+      padding: 40px 0;
+      font-size: 30px;
+    }
+    .content-form {
+      width: 90%;
+      margin: auto;
+      justify-content: space-around;
+      display: flex;
+      .input {
+        margin-top: 20px;
+        width: 120px;
+        border-radius: 30px !important;
+      }
+      .ip1 {
+        width: 255px;
+      }
+      .btn {
+        margin: 10px 0;
+        background-color: rgb(78, 201, 150);
+        width: 120px;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1230px) {
+  .content {
+    .content-product {
+      display: block;
+      .content-img {
+        width: 500px;
+        margin: auto;
+      }
+      .infomation {
+        width: 500px;
+        margin: auto;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .content {
+    .content-product {
+      width: 100%;
+      display: block;
+      .content-img {
+        width: 300px;
+        margin: auto;
+        img {
+          height: 300px;
+        }
+        .item {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+      .infomation {
+        width: 200px;
+        margin: auto;
+        margin-top: 30px;
+      }
+    }
+    .form {
+      .map {
+        height: 280px;
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .form {
+    display: block;
+    .map {
+      height: 400px;
+      margin: auto;
+    }
+    .form-register {
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+}
