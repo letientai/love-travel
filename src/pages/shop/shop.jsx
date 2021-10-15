@@ -9,18 +9,16 @@ function Shop() {
   const [data, setData] = useState([]);
   const [address, setAddress] = useState("");
 
-  const fetchData = async () => {
-    await setData(MainData);
-    await console.log("ahihi", data);
+  const fetchData = () => {
+    setData(MainData);
   };
-  const onSubmitBrand = async (e) => {
+  const onSearchAdd = async (e) => {
     await setAddress(e.target.value)
     await setData(
       MainData.filter((item) =>
         item?.add?.toLocaleLowerCase()?.includes(e.target.value?.toLocaleLowerCase())
       )
     );
-    await console.log("ahuhu", data);
   };
   useEffect(() => {
     fetchData();
@@ -35,10 +33,8 @@ function Shop() {
           <div className="searchShop">
             <div className="selectForm">
               <p>Continents</p>
-              <select className="selectBox" value={address} onChange={onSubmitBrand} >
-                <option selected value="">
-                  All
-                </option>
+              <select className="selectBox" value={address} onChange={onSearchAdd} >
+                <option selected value=""> All </option>
                 <option value="Europe">Europe</option>
                 <option value="Thailandia">Thailandia</option>
                 <option value="United States">United States</option>

@@ -155,8 +155,8 @@ const Navbar = () => {
                 <span>SHOP</span>
               </Link>
             </div>
-            <div className="option">
-              <Link to="/aboutUs" className="option1" onClick={moveToAboutUs}>
+            <div className="option" onClick={moveToAboutUs}>
+              <Link to="/aboutUs" className="option1" >
                 <span>ABOUT US</span>
               </Link>
             </div>

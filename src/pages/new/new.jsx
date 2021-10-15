@@ -11,8 +11,8 @@ function New() {
         <Navbar />
       </div>
       <div className="content-new">
-      <h1>Chưa có gì hết Ahihi đồ ngu !!</h1>
-
+        <h1>Chưa có gì hết Ahihi đồ ngu !!</h1>
+        
       </div>
       <Footer />
     </div>
