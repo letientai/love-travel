@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar/navbar";
 import MainData from "../../asset/data/mainData";
 import Footer from "../../components/footer/footer";
 import { useLocation } from "react-router-dom";
-import { Icon, Input, Button, Modal, Image } from "semantic-ui-react";
+import { Icon, Input, Button, Modal, Image, Rating } from "semantic-ui-react";
 import Map from "../../components/map/map";
 
 function Product() {
@@ -22,7 +22,6 @@ function Product() {
   const key = "AIzaSyC_OIsbQc7McILuw7HzAqnJY5DbTv0SLQg";
   // const key = "'AIzaSyDPm_QnYeqX-zFJ-4AusURyOwuLxhzMtjA";
   const [open, setOpen] = React.useState(false);
-  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -109,11 +108,12 @@ function Product() {
           <div className="infomation">
             <b>{data.name}</b>
             <div className="icon">
+              {/* <Icon name="star" />
               <Icon name="star" />
               <Icon name="star" />
               <Icon name="star" />
-              <Icon name="star" />
-              <Icon name="star" />
+              <Icon name="star" /> */}
+              <Rating icon="star" defaultRating={4} maxRating={5} />
             </div>
             <h2>{data.price} $</h2>
             <p>
@@ -209,20 +209,19 @@ function Product() {
                 Send
               </Button> */}
               <Modal
+                className="modal1"
                 onClose={() => setOpen(false)}
                 onOpen={() => setOpen(true)}
                 open={open}
-                trigger={ <Button className="btn" disabled={checkInfo}>
-                Send
-              </Button>}
+                trigger={
+                  <Button className="btn" disabled={checkInfo}>
+                    Send
+                  </Button>
+                }
               >
                 <Modal.Header>Is your information correct?</Modal.Header>
                 <Modal.Content image>
-                  <Image
-                    size="medium"
-                    src={data.image}
-                    wrapped
-                  />
+                  <Image size="medium" src={data.image} wrapped />
                   <Modal.Description>
                     <p>Name: {name}</p>
                     <p>Surname: {surname}</p>
@@ -237,7 +236,6 @@ function Product() {
                   <Button onClick={() => setOpen(false)} positive>
                     Ok
                   </Button>
-                  
                 </Modal.Actions>
               </Modal>
             </div>

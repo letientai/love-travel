@@ -9,12 +9,53 @@ import {
   TextArea,
   Button,
   FormInput,
+  Header,
+  Icon,
+  Modal,
 } from "semantic-ui-react";
+import { useState } from "react/cjs/react.development";
 function Contact() {
+  const [open, setOpen] = React.useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onChange = (e, field) => {
+    const value = e.target.value;
+    switch (field) {
+      case "name":
+        setName(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "phone":
+        setPhone(value);
+        break;
+      case "message":
+        setMessage(value);
+        break;
+      default:
+      // code block
+    }
+  };
+  const setInput = () => {
+    setName("");
+    setPhone("");
+    setEmail("");
+    setMessage("");
+  };
+
+  let checkInfo = true;
+  !name || !email || !phone || !message
+    ? (checkInfo = true)
+    : (checkInfo = false);
+
   return (
     <div className="container">
       <div className="top-contact">
-        <Navbar />
+        <Navbar/>
       </div>
       <div className="content-contact">
         <div className="form-contact">
@@ -28,26 +69,60 @@ function Contact() {
           </p>
           <Segment raised>
             <Label as="a" color="teal" ribbon>
-              Thông tin khách hàng
+              CONTACT US
             </Label>
             <Form className="info-form">
               <Form.Field>
                 <label>Name:</label>
-                <input />
+                <input onChange={(e) => onChange(e, "name")} value={name} />
               </Form.Field>
               <Form.Field>
                 <label>Phone:</label>
-                <FormInput />
+                <FormInput
+                  onChange={(e) => onChange(e, "phone")}
+                  value={phone}
+                  type="number"
+                />
               </Form.Field>
               <Form.Field>
                 <label>Email:</label>
-                <input type="Email" />
+                <input onChange={(e) => onChange(e, "email")} value={email} />
               </Form.Field>
               <Form.Field>
                 <label>Message:</label>
-                <TextArea className="mess" />
+                <TextArea
+                  className="mess"
+                  onChange={(e) => onChange(e, "message")}
+                  value={message}
+                />
               </Form.Field>
-              <Button className="btn">Send</Button>
+              <Modal
+                className="modal1"
+                basic
+                onClose={() => setOpen(false)}
+                onOpen={() => setOpen(true)}
+                open={open}
+                size="small"
+                trigger={
+                  <Button className="btn" disabled={checkInfo}>
+                    Send
+                  </Button>
+                }
+              >
+                <Header icon>
+                  <Icon name="check" />
+                  Submitted successfully
+                </Header>
+                <Modal.Actions>
+                  <Button
+                    color="green"
+                    inverted
+                    onClick={() => (setOpen(false), setInput())}
+                  >
+                    <Icon name="checkmark" /> Yes
+                  </Button>
+                </Modal.Actions>
+              </Modal>
             </Form>
           </Segment>
         </div>
@@ -57,7 +132,7 @@ function Contact() {
             alt=""
           />
           <div className="form-inf">
-            <div className="options">
+            <div className="options1">
               <div className="option">
                 <h4>Address :</h4>
                 <p>Avenue 234</p>
@@ -67,7 +142,7 @@ function Contact() {
                 <p>0916786817</p>
               </div>
             </div>
-            <div className="options">
+            <div className="options1">
               <div className="option">
                 <h4>City :</h4>
                 <p>New York - US</p>
@@ -77,7 +152,7 @@ function Contact() {
                 <p>letai97md@gmail.com</p>
               </div>
             </div>
-            <div className="options">
+            <div className="options1">
               <div className="option">
                 <h4>Check-In :</h4>
                 <p>15:00 am</p>
