@@ -8,7 +8,6 @@ const CardItem = (props) => {
   const item = props.product;
   const moveToDetail = () =>{
     history.push(`/product/${item.id}`)
-    console.log("item", item.id);
   }
   return (
     <div>
