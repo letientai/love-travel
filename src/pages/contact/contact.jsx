@@ -1,5 +1,5 @@
 import "./contact.scss";
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
 import {
@@ -13,9 +13,8 @@ import {
   Icon,
   Modal,
 } from "semantic-ui-react";
-import { useState } from "react/cjs/react.development";
 function Contact() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -128,7 +127,7 @@ function Contact() {
         </div>
         <div className="infomation">
           <img
-            src="https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/148862036_2731807687149499_7306548952366446257_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=e3f864&_nc_ohc=b-fqqD9XvYEAX9-Mpks&_nc_ht=scontent.fdad1-1.fna&oh=1e45e1c91a391fb081e5f97cb90d1986&oe=619008F0"
+            src="https://d3bpb7mvrje809.cloudfront.net/1623399509910.jpg"
             alt=""
           />
           <div className="form-inf">
