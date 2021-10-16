@@ -4,11 +4,26 @@ import Navbar from "../../components/navbar/navbar";
 import MainData from "../../asset/data/mainData";
 import Footer from "../../components/footer/footer";
 import { useLocation } from "react-router-dom";
-import { Icon, Input, Button, Modal, Image, Rating } from "semantic-ui-react";
+import {
+  Input,
+  Button,
+  Modal,
+  Image,
+  Rating,
+  Comment,
+  Icon,
+  Form,
+  FormInput,
+  TextArea,
+  Header
+} from "semantic-ui-react";
 import Map from "../../components/map/map";
+import DataComment from "../../asset/data/dataComment";
+import CardItem from "../../components/cardItem/cardItem";
 
 function Product() {
   const [data, setData] = useState([]);
+  const [data2, setData2] = useState([]);
   const [image, setImage] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [name, setName] = useState("");
@@ -23,14 +38,21 @@ function Product() {
   // const key = "'AIzaSyDPm_QnYeqX-zFJ-4AusURyOwuLxhzMtjA";
   const [open, setOpen] = React.useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    fetchDatas();
+  useEffect(async () => {
+    await window.scrollTo(0, 0);
+    await fetchDatas();
+    var product = MainData[parseInt(id) - 1].add;
+    await setData2(
+      MainData.filter((item) =>
+        item?.add
+          ?.toLocaleLowerCase()
+          ?.includes(product?.toLocaleLowerCase())
+      )
+    );
   }, [location]);
-
-  const fetchDatas = () => {
-    setData(MainData[parseInt(id) - 1]);
-    setImage(MainData[parseInt(id) - 1].image);
+  const fetchDatas = async () => {
+    await setData(MainData[parseInt(id) - 1]);
+    await setImage(MainData[parseInt(id) - 1].image);
   };
   const onChangeImage = (field) => {
     setImage(field);
@@ -240,6 +262,57 @@ function Product() {
               </Modal>
             </div>
           </div>
+        </div>
+        <div className="form-comment">
+          <p>Comment</p>
+          <hr />
+          {DataComment.map((item) => (
+            <Comment.Group key={item.id} className="comment">
+              <Comment>
+                <Comment.Avatar as="a" src={item.image} />
+                <Comment.Content>
+                  <Comment.Author>{item.name}</Comment.Author>
+                  <Comment.Text>{item.text}</Comment.Text>
+                  <Comment.Actions>
+                    <Comment.Action>Reply</Comment.Action>
+                    <Comment.Action>Save</Comment.Action>
+                    <Comment.Action>Hide</Comment.Action>
+                    <Comment.Action>
+                      <Icon name="expand" />
+                      Full-screen
+                    </Comment.Action>
+                  </Comment.Actions>
+                </Comment.Content>
+              </Comment>
+            </Comment.Group>
+          ))}
+          <div className="form-send">
+            <Form className="comment1">
+              <Form.Field>
+                <label>Phone:</label>
+                <FormInput
+                  type="number"
+                />
+              </Form.Field>
+              <Form.Field>
+                <label>Email:</label>
+                <input />
+              </Form.Field>
+              <Form.Field>
+                <label>Message:</label>
+                <TextArea
+                  className="mess"
+                />
+              </Form.Field>
+              <Button className="btn">Send</Button>
+            </Form>
+          </div>
+        <hr />
+        </div>
+        <div className="related-product">
+          {data2.map((item) => (
+           <CardItem product={item} key ={item.id}/>
+          ))}
         </div>
       </div>
       <Footer />
